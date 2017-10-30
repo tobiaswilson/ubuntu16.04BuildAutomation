@@ -10,7 +10,7 @@
 # ============================= #
 # Input your system details here
 # ============================= #
-#
+
 
 HOSTNAME =
 SYSTEMIP = 
@@ -24,5 +24,20 @@ PUBLICKEY =
 
 # ============================= #
 #      End of manual input
+#   Please run script as root
 # ============================= #
+#
+echo "We're making sure the system is updated"
+#
+aptitude update && aptitude safe-upgrade -y
+#
+echo "Now we're going to set the hostname"
+#
+echo "$HOSTNAME" > /etc/hostname
+#
+echo "Updating hosts filename"
+#
+mv /etc/hosts /etc/hosts.bak
+#
+echo "
 
