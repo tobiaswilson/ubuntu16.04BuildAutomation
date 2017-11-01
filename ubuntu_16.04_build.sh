@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#Important notes:
+
+# Run script as root
+# Navigate to desired folder and type:
+# git pull https://github.com/tobiaswilson/ubuntu_16.04_build
+# ./[scriptname].sh to run script
+# Please input your values first before running the script
+
+
 # ============================= #
 #   Designed for Ubuntu 16.04 
 # To build your server for you 
