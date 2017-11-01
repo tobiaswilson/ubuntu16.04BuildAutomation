@@ -11,7 +11,7 @@
 # Input your system details here
 # ============================= #
 
-HOSTNAME =
+HOSTNAME = 
 SYSTEMIP = 
 DOMAIN = 
 SSHPORT = 
@@ -26,7 +26,7 @@ PUBLICKEY =
 #
 echo "We're making sure the system is updated"
 #
-aptitude update && aptitude safe-upgrade -y
+apt-get update && apt-get safe-upgrade -y
 #
 echo "Now we're going to set the hostname"
 #
@@ -46,6 +46,8 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
 " >> /etc/hosts
+
+apt-get install openssh-server -y
 
 # ============================= #
 #         SSH Security
