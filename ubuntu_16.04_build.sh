@@ -61,9 +61,9 @@ echo "Disabling root login"
 
 sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
 
-echo "Disabling password authentication"
+#  echo "Disabling password authentication"
 
-sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
+#  sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/g" /etc/ssh/sshd_config
 
 
 # -------------------------------------------------------------------------
