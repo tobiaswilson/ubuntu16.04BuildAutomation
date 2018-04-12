@@ -2,9 +2,10 @@
 
 #Important notes:
 
-# Run script as root
+# Run script as super user
+# This is for post installation setup
 # Navigate to desired folder and type:
-# git pull https://github.com/tobiaswilson/ubuntu_16.04_build
+# git clone https://github.com/tobiaswilson/ubuntu16.04BuildAutomation.git
 # ./[scriptname].sh to run script
 # Please input your values first before running the script
 
@@ -30,7 +31,7 @@ PUBLICKEY =
 
 # ============================= #
 #      End of manual input
-#   Please run script as root
+#   Please run script as super user
 # ============================= #
 #
 echo "We're making sure the system is updated"
@@ -76,7 +77,7 @@ sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
 
 
 # -------------------------------------------------------------------------
-# Script to add a user to Linux system
+# Script to add a user to Linux system - take from http://bash.cybercit.biz
 # -------------------------------------------------------------------------
 # Copyright (c) 2007 nixCraft project <http://bash.cyberciti.biz/>
 # -------------------------------------------------------------------------
